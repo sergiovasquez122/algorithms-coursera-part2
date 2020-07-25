@@ -31,8 +31,8 @@ public class WordNet {
                 if(synMap.containsKey(noun)){
                     synMap.get(noun).add(id);
                 } else{
-                    Bag<Integer> bag = new Bag<>();
-                    bag.add(id);
+                    synMap.put(noun, new Bag<>());
+                    synMap.get(noun).add(id);
                 }
             }
         }
