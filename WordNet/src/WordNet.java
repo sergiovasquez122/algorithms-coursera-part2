@@ -6,7 +6,9 @@ import edu.princeton.cs.algs4.DirectedCycle;
 
 public class WordNet {
     public WordNet(String synsets, String hypernyms){
-
+        if(synsets == null || hypernyms == null){
+            throw new IllegalArgumentException();
+        }
     }
 
     public Iterable<String> nouns(){
@@ -14,14 +16,23 @@ public class WordNet {
     }
 
     public boolean isNoun(String word){
+        if(word == null){
+            throw new IllegalArgumentException();
+        }
         return false;
     }
 
     public int distance(String nounA, String nounB){
+        if(!isNoun(nounA) || !isNoun(nounB)){
+            throw new IllegalArgumentException();
+        }
         return 0;
     }
 
     public String sap(String nounA, String nounB){
+        if(nounA == null || nounB == null){
+            throw new IllegalArgumentException();
+        }
         return "";
     }
 
