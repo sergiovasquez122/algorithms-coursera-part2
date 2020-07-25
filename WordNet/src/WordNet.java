@@ -41,6 +41,8 @@ public class WordNet {
             String[] parts = in.readLine().split(",");
             String[] nouns = parts[1].split(" ");
             int id = Integer.parseInt(parts[0]);
+
+            synSets.put(id, parts[1]);
             for(String noun : nouns){
                 if(synMap.containsKey(noun)){
                     synMap.get(noun).add(id);
