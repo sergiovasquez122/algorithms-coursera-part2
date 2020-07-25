@@ -6,6 +6,7 @@ public class WordNet {
 
     private HashMap<Integer, String> synSets;
     private HashMap<String, Bag<Integer>> synMap;
+    private Digraph G;
     /**
      * Constructor that takes the name of two input files
      * @param synsets the file contains all noun synsets in WordNet
@@ -18,6 +19,18 @@ public class WordNet {
         synSets = new HashMap<>();
         synMap = new HashMap<>();
         int V = readSynsets(synsets);
+        G = new Digraph(V);
+    }
+
+    private void readHypernyms(String hypernyms){
+        In in = new In(hypernyms);
+        while(in.hasNextLine()){
+            String[] parts = hypernyms.split(",");
+            int v = Integer.parseInt(parts[0]);
+            for(int i = 1;i < parts.length;++i){
+                G.addEdge(v, Integer.parseInt(parts[i]));
+            }
+        }
     }
 
     private int readSynsets(String synsets){
