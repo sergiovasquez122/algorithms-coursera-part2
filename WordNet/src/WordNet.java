@@ -4,8 +4,8 @@ import java.util.HashMap;
 
 public class WordNet {
 
-    private final HashMap<Integer, String> synsets;
-    private final HashMap<String, Bag<Integer>> synMap;
+    private HashMap<Integer, String> synSets;
+    private HashMap<String, Bag<Integer>> synMap;
     /**
      * Constructor that takes the name of two input files
      * @param synsets the file contains all noun synsets in WordNet
@@ -15,9 +15,8 @@ public class WordNet {
         if(synsets == null || hypernyms == null){
             throw new IllegalArgumentException();
         }
-        synsets = new HashMap<>();
+        synSets = new HashMap<>();
         synMap = new HashMap<>();
-
     }
 
     private int readSynsets(String synsets){
@@ -26,7 +25,16 @@ public class WordNet {
         while(in.hasNextLine()){
             count++;
             String[] parts = in.readLine().split(",");
-
+            String[] nouns = parts[1].split(" ");
+            int id = Integer.parseInt(parts[0]);
+            for(String noun : nouns){
+                if(synMap.containsKey(noun)){
+                    synMap.get(noun).add(id);
+                } else{
+                    Bag<Integer> bag = new Bag<>();
+                    bag.add(id);
+                }
+            }
         }
         return count;
     }
@@ -47,7 +55,7 @@ public class WordNet {
         if(word == null){
             throw new IllegalArgumentException();
         }
-        return false;
+        return synMap.containsKey(word);
     }
 
     /**
