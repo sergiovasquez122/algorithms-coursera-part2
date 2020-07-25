@@ -15,7 +15,20 @@ public class WordNet {
         if(synsets == null || hypernyms == null){
             throw new IllegalArgumentException();
         }
+        synsets = new HashMap<>();
+        synMap = new HashMap<>();
 
+    }
+
+    private int readSynsets(String synsets){
+        In in = new In(synsets);
+        int count = 0;
+        while(in.hasNextLine()){
+            count++;
+            String[] parts = in.readLine().split(",");
+
+        }
+        return count;
     }
 
     /**
