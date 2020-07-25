@@ -17,6 +17,7 @@ public class WordNet {
         }
         synSets = new HashMap<>();
         synMap = new HashMap<>();
+        int V = readSynsets(synsets);
     }
 
     private int readSynsets(String synsets){
@@ -44,7 +45,7 @@ public class WordNet {
      * @return all WordNetNouns
      */
     public Iterable<String> nouns(){
-        return null;
+        return synMap.keySet();
     }
 
     /**
