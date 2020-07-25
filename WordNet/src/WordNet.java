@@ -20,6 +20,19 @@ public class WordNet {
         synMap = new HashMap<>();
         int V = readSynsets(synsets);
         G = new Digraph(V);
+        readHypernyms(hypernyms);
+        DirectedCycle cycleFinder = new DirectedCycle(G);
+        if(cycleFinder.hasCycle())
+            throw new IllegalArgumentException();
+        int vertices_with_degree_zero = 0;
+        for(int v = 0;v < G.V();++v){
+            if(G.outdegree(v) == 0){
+                vertices_with_degree_zero++;
+            }
+        }
+        if(vertices_with_degree_zero != 1){
+            throw new IllegalArgumentException();
+        }
     }
 
     private void readHypernyms(String hypernyms){
@@ -101,6 +114,6 @@ public class WordNet {
 
 
     public static void main(String[] args) {
-        WordNet wordNet = new WordNet("/home/sergio/algorithms-coursera-part2/WordNet/src/synsets.txt", "");
+        WordNet wordNet = new WordNet("/home/sergio/algorithms-coursera-part2/WordNet/src/synsets.txt", "/home/sergio/algorithms-coursera-part2/WordNet/src/hypernyms.txt");
     }
 }
