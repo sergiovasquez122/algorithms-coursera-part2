@@ -6,7 +6,9 @@ import edu.princeton.cs.algs4.StdIn;
 
 public class SAP {
     public SAP(Digraph G){
-
+        if(G == null){
+            throw new IllegalArgumentException();
+        }
     }
 
     public int length(int v, int w){
