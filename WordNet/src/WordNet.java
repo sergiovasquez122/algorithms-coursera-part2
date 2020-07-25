@@ -1,13 +1,14 @@
-import edu.princeton.cs.algs4.Digraph;
-import edu.princeton.cs.algs4.In;
-import edu.princeton.cs.algs4.SET;
-import edu.princeton.cs.algs4.ST;
-import edu.princeton.cs.algs4.DirectedCycle;
+import edu.princeton.cs.algs4.*;
 
 public class WordNet {
     public WordNet(String synsets, String hypernyms){
         if(synsets == null || hypernyms == null){
             throw new IllegalArgumentException();
+        }
+
+        In synset_file = new In(synsets);
+        while(!synset_file.isEmpty()){
+            String[] a = synset_file.readLine().split(",");
         }
     }
 
@@ -37,6 +38,6 @@ public class WordNet {
     }
 
     public static void main(String[] args) {
-
+        WordNet wordNet = new WordNet("/home/sergio/algorithms-coursera-part2/WordNet/src/synsets.txt", "");
     }
 }
