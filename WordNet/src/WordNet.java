@@ -1,7 +1,11 @@
 import edu.princeton.cs.algs4.*;
 
+import java.util.HashMap;
+
 public class WordNet {
 
+    private final HashMap<Integer, String> synsets;
+    private final HashMap<String, Bag<Integer>> synMap;
     /**
      * Constructor that takes the name of two input files
      * @param synsets the file contains all noun synsets in WordNet
