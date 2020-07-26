@@ -8,13 +8,13 @@ public class SeamCarver {
     private int height;
 
     public SeamCarver(Picture picture){
-        this.picture = picture;
+        this.picture = new Picture(picture);
         this.height = picture.height();
         this.width = picture.width();
     }
 
     public Picture picture(){
-        return this.picture;
+        return new Picture(this.picture);
     }
 
     public int width(){
