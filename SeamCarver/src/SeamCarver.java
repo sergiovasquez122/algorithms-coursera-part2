@@ -62,6 +62,17 @@ public class SeamCarver {
     }
 
     public int[] findVerticalSeam(){
+        double energy[][] = new double[height][width];
+        for(int i = 0;i < height;++i){
+            for(int j = 0;j < width;++j){
+                if(i == 0 || j == 0 || i == height - 1 || j == width - 1){
+                    energy[i][j] = 1000;
+                } else {
+                    energy[i][j] = energy(i, j) + Math.min(energy[i - 1][j], Math.min(energy[i- 1][j - 1], energy[i-1][j+1]));
+                }
+            }
+        }
+        int[] seam = new int[height];
         return null;
     }
 
