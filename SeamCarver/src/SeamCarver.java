@@ -73,7 +73,28 @@ public class SeamCarver {
             }
         }
         int[] seam = new int[height];
-        return null;
+        int min_idx = 0;
+        double min_value = Double.POSITIVE_INFINITY;
+        for(int i = 0;i < width;++i){
+            if(energy[height - 2][i] < min_value){
+                min_idx = i;
+                min_value = energy[height - 2][i];
+            }
+        }
+        seam[height - 2] = min_idx;
+        seam[height - 1] = min_idx;
+        int back_tracking = height - 2;
+        while(back_tracking > 0){
+            int prev_idx = seam[back_tracking];
+            int final_choice = prev_idx;
+            if(prev_idx - 1 > 0 && energy[back_tracking][prev_idx - 1] < energy[back_tracking][prev_idx]){
+                final_choice = prev_idx-1;
+            } if(prev_idx + 1 < width && energy[back_tracking][prev_idx + 1] < energy[back_tracking][prev_idx]){
+                final_choice = prev_idx + 1;
+            }
+            seam[--back_tracking] = final_choice;
+        }
+        return seam;
     }
 
     public void removeHorizontalSeam(int[] seam){
