@@ -8,24 +8,40 @@ public class SeamCarver {
     private int width;
     private int height;
 
+    /**
+     * Create a seam carver object based on the given picture
+     * @param picture
+     */
     public SeamCarver(Picture picture){
         this.picture = new Picture(picture);
         this.height = picture.height();
         this.width = picture.width();
     }
 
+    /**
+     * @return the current
+     */
     public Picture picture(){
         return picture;
     }
 
+    /**
+     * @return width of current picture
+     */
     public int width(){
         return width;
     }
 
+    /**
+     * @return height of current picture
+     */
     public int height(){
         return height;
     }
 
+    /**
+     * @return energy of pixel at column x and row y
+     */
     public double energy(int x, int y){
         if(x < 0 || x >= width() || y < 0 || y >= height()){
             throw new IllegalArgumentException();
@@ -39,6 +55,9 @@ public class SeamCarver {
         return Math.sqrt(xGradient + yGradient);
     }
 
+    /**
+     * @return return the
+     */
     private double calculateXGradient(int x, int y){
         Color c1 = picture.get(x - 1, y);
         Color c2 = picture.get(x + 1, y);
@@ -57,10 +76,16 @@ public class SeamCarver {
         return redDiff + blueDiff + greenDiff;
     }
 
+    /**
+     * @return sequence of indices for horizontal seam
+     */
     public int[] findHorizontalSeam(){
         return null;
     }
 
+    /**
+     * @return sequence of indices for vertical seam
+     */
     public int[] findVerticalSeam(){
         double energy[][] = new double[height][width];
         for(int i = 0;i < height;++i){
@@ -68,7 +93,7 @@ public class SeamCarver {
                 if(i == 0 || j == 0 || i == height - 1 || j == width - 1){
                     energy[i][j] = 1000;
                 } else {
-                    energy[i][j] = energy(i, j) + Math.min(energy[i - 1][j], Math.min(energy[i- 1][j - 1], energy[i-1][j+1]));
+                    energy[i][j] = energy(j, i) + Math.min(energy[i - 1][j], Math.min(energy[i- 1][j - 1], energy[i-1][j+1]));
                 }
             }
         }
@@ -114,7 +139,16 @@ public class SeamCarver {
                 throw new IllegalArgumentException();
             }
         }
-
+        Picture p = new Picture(width - 1, height);
+        for(int i = 0;i < height;++i){
+            int write_idx = 0;
+            for(int j = 0;j < width;++j){
+                if(seam[i] != j){
+                    p.set(write_idx++,i, picture.get(j, i));
+                }
+            }
+        }
+        picture = p;
     }
 
     public static void main(String[] args) {

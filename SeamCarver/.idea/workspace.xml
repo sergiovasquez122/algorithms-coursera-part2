@@ -14,8 +14,8 @@
       <file leaf-file-name="ShowEnergy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ShowEnergy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+            <state relative-caret-position="195">
+              <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -23,31 +23,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrintEnergy.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PrintEnergy.java">
+      <file leaf-file-name="PrintSeams.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PrintSeams.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="300">
+              <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrintSeams.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PrintSeams.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-            </state>
-          </provider>
+      <file leaf-file-name="3x4.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/3x4.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file leaf-file-name="ResizeDemo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ResizeDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="342">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HJoceanTransposed.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HJoceanTransposed.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="logo.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logo.png">
+          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file leaf-file-name="SCUtility.java" pinned="false" current-in-tab="false">
@@ -75,28 +81,30 @@
       <file leaf-file-name="SeamCarver.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SeamCarver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="113" selection-start-line="113" selection-end-line="113" />
+            <state relative-caret-position="180">
+              <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#534#535#0" expanded="true" />
+                <element signature="e#564#565#0" expanded="true" />
+                <element signature="e#632#633#0" expanded="true" />
+                <element signature="e#660#661#0" expanded="true" />
+                <element signature="e#686#687#0" expanded="true" />
+                <element signature="e#715#716#0" expanded="true" />
+                <element signature="e#2030#2031#0" expanded="true" />
+                <element signature="e#2057#2058#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="3x4.printseams.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/3x4.printseams.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="3x7.printseams.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/3x7.printseams.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="3x7.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/3x7.png">
-          <provider selected="true" editor-type-id="images" />
+      <file leaf-file-name="Picture.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/algs4/algs4.jar!/edu/princeton/cs/algs4/Picture.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="181" selection-start-line="181" selection-end-line="181" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -104,6 +112,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/src/PrintSeams.java" />
         <option value="$PROJECT_DIR$/src/SeamCarver.java" />
       </list>
     </option>
@@ -158,11 +167,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.PrintEnergy">
+  <component name="RunManager" selected="Application.ResizeDemo">
     <configuration name="PrintEnergy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="PrintEnergy" />
       <module name="SeamCarver" />
       <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/3x7.png" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="PrintSeams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PrintSeams" />
+      <module name="SeamCarver" />
+      <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/3x4.png 1 0" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="ResizeDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ResizeDemo" />
+      <module name="SeamCarver" />
+      <option name="PROGRAM_PARAMETERS" value="$PROJECT_DIR$/logo.png 5 0" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     </configuration>
     <configuration name="SeamCarver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -203,12 +224,16 @@
       <item itemvalue="Application.SeamCarver" />
       <item itemvalue="Application.ShowEnergy" />
       <item itemvalue="Application.PrintEnergy" />
+      <item itemvalue="Application.ResizeDemo" />
+      <item itemvalue="Application.PrintSeams" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PrintEnergy" />
-        <item itemvalue="Application.ShowEnergy" />
+        <item itemvalue="Application.ResizeDemo" />
+        <item itemvalue="Application.PrintSeams" />
         <item itemvalue="Application.SeamCarver" />
+        <item itemvalue="Application.ShowEnergy" />
+        <item itemvalue="Application.PrintEnergy" />
       </list>
     </recent_temporary>
   </component>
@@ -227,6 +252,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="651" height="744" extended-state="4" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24920128" />
@@ -235,9 +261,9 @@
       <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32868218" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34263566" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32868218" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.3131783" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -313,9 +339,6 @@
     <entry file="file://$PROJECT_DIR$/1x1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/3x4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/3x4.printseams.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -325,24 +348,10 @@
     <entry file="file://$PROJECT_DIR$/3x7.printseams.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ResizeDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PrintEnergy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PrintSeams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -357,10 +366,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/3x4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HJoceanTransposed.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PrintSeams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="60" column="4" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ShowEnergy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+        <state relative-caret-position="195">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -374,12 +399,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ResizeDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/algs4/algs4.jar!/edu/princeton/cs/algs4/Picture.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="181" selection-start-line="181" selection-end-line="181" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/SeamCarver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        <state relative-caret-position="180">
+          <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#686#687#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+            <element signature="e#2030#2031#0" expanded="true" />
+            <element signature="e#2057#2058#0" expanded="true" />
           </folding>
         </state>
       </provider>
