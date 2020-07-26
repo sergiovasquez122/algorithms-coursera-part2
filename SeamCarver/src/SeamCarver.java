@@ -34,11 +34,23 @@ public class SeamCarver {
         if(x == 0 || x == width - 1 || y == 0 || y == height - 1){
             return 1000;
         }
+        double xGradient = calculateXGradient(x, y);
+        double yGradient = calculateYGradient(x, y);
+        return Math.sqrt(xGradient + yGradient);
     }
 
     private double calculateXGradient(int x, int y){
         Color c1 = picture.get(x - 1, y);
         Color c2 = picture.get(x + 1, y);
+        double redDiff = Math.pow(c1.getRed() - c2.getRed(), 2);
+        double blueDiff = Math.pow(c1.getBlue() - c2.getBlue(), 2);
+        double greenDiff = Math.pow(c1.getGreen() - c2.getGreen(), 2);
+        return redDiff + blueDiff + greenDiff;
+    }
+
+    private double calculateYGradient(int x, int y){
+        Color c1 = picture.get(x, y - 1);
+        Color c2 = picture.get(x, y + 1);
         double redDiff = Math.pow(c1.getRed() - c2.getRed(), 2);
         double blueDiff = Math.pow(c1.getBlue() - c2.getBlue(), 2);
         double greenDiff = Math.pow(c1.getGreen() - c2.getGreen(), 2);
