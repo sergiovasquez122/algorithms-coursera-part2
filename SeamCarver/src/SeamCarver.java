@@ -1,6 +1,7 @@
 import edu.princeton.cs.algs4.Picture;
 import edu.princeton.cs.algs4.StdOut;
 
+import javax.swing.plaf.metal.MetalTheme;
 import java.awt.Color;
 import java.util.Collections;
 
@@ -84,7 +85,10 @@ public class SeamCarver {
      * @return sequence of indices for horizontal seam
      */
     public int[] findHorizontalSeam(){
-        return null;
+            transpose();
+            int ret[] = findVerticalSeam();
+            transpose();
+            return ret;
     }
 
     /**
@@ -191,6 +195,18 @@ public class SeamCarver {
         picture = p;
         this.height = picture.height();
         this.width = picture.width();
+    }
+
+    private void transpose(){
+        Picture pic = new Picture(height(),width());
+        for(int y = 0;y<height();++y){
+            for(int x = 0;x<width();++x){
+                pic.set(y,x,picture.get(x,y));
+            }
+        }
+        picture = pic;
+        this.width = pic.width();
+        this.height = pic.height();
     }
 
 
