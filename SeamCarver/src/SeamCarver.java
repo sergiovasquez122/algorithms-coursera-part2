@@ -155,7 +155,7 @@ public class SeamCarver {
         if(height()<=1) throw new IllegalArgumentException();
         if(seam.length != height) throw new IllegalArgumentException();
         for(int i = 0;i < seam.length;++i){
-            if(seam[i] < 0 || seam[i] >= width - 1){
+            if(seam[i] < 0 || seam[i] >= width){
                 throw new IllegalArgumentException();
             }
         }
