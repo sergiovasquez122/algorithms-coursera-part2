@@ -11,7 +11,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BoggleBoard.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BoggleBoard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BoggleBoard.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="281">
@@ -38,11 +38,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BoggleSolver.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BoggleSolver.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/BoggleSolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-518">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="195">
+              <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+              <folding>
+                <element signature="e#270#271#0" expanded="true" />
+                <element signature="e#291#292#0" expanded="true" />
+                <element signature="e#339#340#0" expanded="true" />
+                <element signature="e#358#359#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -53,6 +59,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/BoggleBoard.java" />
+        <option value="$PROJECT_DIR$/src/BoggleSolver.java" />
       </list>
     </option>
   </component>
@@ -146,7 +153,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="715" y="24" width="651" height="744" extended-state="4" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.50958467" />
@@ -172,13 +178,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/BoggleSolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-518">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TrieSET.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1388">
@@ -198,6 +197,19 @@
             <element signature="e#6070#6071#0" expanded="true" />
             <element signature="e#6398#6399#0" expanded="true" />
             <element signature="e#6432#6433#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BoggleSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding>
+            <element signature="e#270#271#0" expanded="true" />
+            <element signature="e#291#292#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
           </folding>
         </state>
       </provider>
