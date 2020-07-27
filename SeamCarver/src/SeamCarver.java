@@ -167,7 +167,7 @@ public class SeamCarver {
         Picture pic = new Picture(width-1,height);
         for(int i = 0;i<height;++i){
             int write_index = 0;
-            for(int j = 0;j<width();++j){
+            for(int j = 0;j<width;++j){
                 if(j==seam[i]) continue;
                 pic.set(write_index++,i,picture.get(j,i));
             }
