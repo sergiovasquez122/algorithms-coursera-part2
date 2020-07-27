@@ -83,7 +83,44 @@ public class SeamCarver {
      * @return sequence of indices for horizontal seam
      */
     public int[] findHorizontalSeam(){
-        return null;
+        double energy[][] = new double[height][width];
+        for(int i = 0;i < height;++i){
+            energy[i][0] = 1000;
+        }
+        for(int i = 0;i < height;++i){
+            for(int j = 1;j < width;++j){
+                if(i == 0){
+                    energy[i][j] = energy(j, i) + Math.min(energy[i][j - 1], energy[i + 1][j - 1]);
+                } else if(j == height - 1){
+                    energy[i][j] = energy(j, i) + Math.min(energy[i][j - 1], energy[i - 1][j - 1]);
+                } else {
+                    energy[i][j] = energy(j, i) + Math.min(energy[i][j - 1], Math.min(energy[i - 1][j - 1], energy[i + 1][j - 1]));
+                }
+            }
+        }
+        int[] seam = new int[width];
+        int min_idx = 0;
+        double min_value = Double.POSITIVE_INFINITY;
+        for(int i = 0;i < height;++i){
+            if(energy[width - 2][i] < min_value){
+                min_idx = i;
+                min_value = energy[width - 2][i];
+            }
+        }
+        seam[width - 2] = min_idx;
+        seam[width - 1] = min_idx;
+        int back_tracking = width - 2;
+        while(back_tracking > 0){
+            int prev_idx = seam[back_tracking];
+            int final_choice = prev_idx;
+            if(prev_idx - 1 > 0 && energy[prev_idx - 1][back_tracking] < energy[prev_idx][back_tracking]){
+                final_choice = prev_idx-1;
+            } if(prev_idx + 1 < height && energy[prev_idx + 1][back_tracking] < energy[prev_idx][back_tracking]){
+                final_choice = prev_idx + 1;
+            }
+            seam[--back_tracking] = final_choice;
+        }
+        return seam;
     }
 
     /**
@@ -167,6 +204,7 @@ public class SeamCarver {
         this.height = picture.height();
         this.width = picture.width();
     }
+
 
     public static void main(String[] args) {
     }
