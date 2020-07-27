@@ -138,62 +138,40 @@ public class SeamCarver {
      * @param seam the horizontal seam to be removed from the image
      */
     public void removeHorizontalSeam(int[] seam){
-        if(seam == null || seam.length != width || width <= 1){
-            throw new IllegalArgumentException();
-        }
-        for(int i = 0;i < seam.length;i++){
-            if(seam[i] < 0 || seam[i] > width){
-                throw new IllegalArgumentException();
-            }
-        }
-        for(int i = 1;i < seam.length;i++){
-            if(Math.abs(seam[i] - seam[i - 1]) > 1){
-                throw new IllegalArgumentException();
-            }
-        }
-        Picture p = new Picture(width, height - 1);
-        for(int i = 0;i < height;++i){
-            int write_idx = 0;
-            for(int j = 0;j < width;++j){
-                if(seam[i] != i){
-                    p.set(j,write_idx++, picture.get(j, i));
-                }
-            }
-        }
-        picture = p;
-        this.height = picture.height();
-        this.width = picture.width();
+        transpose();
+        removeVerticalSeam(seam);
+        transpose();
     }
 
     /**
      * @param seam the vertical seam to be removed from the image
      */
-    public void removeVerticalSeam(int[] seam){
-        if(seam == null || seam.length != height || height <= 1) {
-            throw new IllegalArgumentException();
-        }
-        for(int i = 0;i < seam.length;i++){
-            if(seam[i] < 0 || seam[i] > width){
+    public void removeVerticalSeam(int[] seam)
+    {
+        if(seam==null) throw new IllegalArgumentException();
+        if(height()<=1) throw new IllegalArgumentException();
+        if(seam.length != height) throw new IllegalArgumentException();
+        for(int i = 0;i < seam.length;++i){
+            if(seam[i] < 0 || seam[i] >= width - 1){
                 throw new IllegalArgumentException();
             }
         }
-        for(int i = 1;i < seam.length;i++){
+        for(int i = 1;i < seam.length;++i){
             if(Math.abs(seam[i] - seam[i - 1]) > 1){
                 throw new IllegalArgumentException();
             }
         }
-        Picture p = new Picture(width - 1, height);
-        for(int i = 0;i < height;++i){
-            int write_idx = 0;
-            for(int j = 0;j < width;++j){
-                if(seam[i] != j){
-                    p.set(write_idx++,i, picture.get(j, i));
-                }
+        Picture pic = new Picture(width-1,height);
+        for(int i = 0;i<height;++i){
+            int write_index = 0;
+            for(int j = 0;j<width();++j){
+                if(j==seam[i]) continue;
+                pic.set(write_index++,i,picture.get(j,i));
             }
         }
-        picture = p;
-        this.height = picture.height();
-        this.width = picture.width();
+        picture = pic;
+        width = pic.width();
+        height = pic.height();
     }
 
     private void transpose(){
