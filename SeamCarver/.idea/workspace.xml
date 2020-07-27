@@ -81,8 +81,8 @@
       <file leaf-file-name="SeamCarver.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/SeamCarver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+            <state relative-caret-position="165">
+              <caret line="57" column="6" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#534#535#0" expanded="true" />
@@ -91,8 +91,8 @@
                 <element signature="e#660#661#0" expanded="true" />
                 <element signature="e#686#687#0" expanded="true" />
                 <element signature="e#715#716#0" expanded="true" />
-                <element signature="e#2030#2031#0" expanded="true" />
-                <element signature="e#2057#2058#0" expanded="true" />
+                <element signature="e#2255#2256#0" expanded="true" />
+                <element signature="e#2282#2283#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -415,8 +415,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/SeamCarver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+        <state relative-caret-position="165">
+          <caret line="57" column="6" selection-start-line="57" selection-start-column="6" selection-end-line="57" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#534#535#0" expanded="true" />
@@ -425,8 +425,8 @@
             <element signature="e#660#661#0" expanded="true" />
             <element signature="e#686#687#0" expanded="true" />
             <element signature="e#715#716#0" expanded="true" />
-            <element signature="e#2030#2031#0" expanded="true" />
-            <element signature="e#2057#2058#0" expanded="true" />
+            <element signature="e#2255#2256#0" expanded="true" />
+            <element signature="e#2282#2283#0" expanded="true" />
           </folding>
         </state>
       </provider>

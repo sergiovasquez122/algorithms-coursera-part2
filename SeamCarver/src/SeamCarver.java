@@ -56,7 +56,7 @@ public class SeamCarver {
     }
 
     /**
-     * @return return the
+     * @return gradient of the pixel (x,y) in the column direction
      */
     private double calculateXGradient(int x, int y){
         Color c1 = picture.get(x - 1, y);
@@ -67,6 +67,9 @@ public class SeamCarver {
         return redDiff + blueDiff + greenDiff;
     }
 
+    /**
+     * @return gradient of the pixel (x, y) in the row direction
+     */
     private double calculateYGradient(int x, int y){
         Color c1 = picture.get(x, y - 1);
         Color c2 = picture.get(x, y + 1);
@@ -122,9 +125,16 @@ public class SeamCarver {
         return seam;
     }
 
+
+    /**
+     * @param seam the horizontal seam to be removed from the image
+     */
     public void removeHorizontalSeam(int[] seam){
     }
 
+    /**
+     * @param seam the vertical seam to be removed from the image
+     */
     public void removeVerticalSeam(int[] seam){
         if(seam == null || seam.length != height || height <= 1) {
             throw new IllegalArgumentException();
