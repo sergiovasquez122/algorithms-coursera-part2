@@ -1,9 +1,5 @@
 import edu.princeton.cs.algs4.Picture;
-import edu.princeton.cs.algs4.StdOut;
-
-import javax.swing.plaf.metal.MetalTheme;
 import java.awt.Color;
-import java.util.Collections;
 
 public class SeamCarver {
     private Picture picture;
