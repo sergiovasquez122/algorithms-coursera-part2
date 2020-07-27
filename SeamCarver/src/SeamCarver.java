@@ -1,4 +1,5 @@
 import edu.princeton.cs.algs4.Picture;
+import edu.princeton.cs.algs4.StdOut;
 
 import java.awt.Color;
 import java.util.Collections;
@@ -83,44 +84,7 @@ public class SeamCarver {
      * @return sequence of indices for horizontal seam
      */
     public int[] findHorizontalSeam(){
-        double energy[][] = new double[height][width];
-        for(int i = 0;i < height;++i){
-            energy[i][0] = 1000;
-        }
-        for(int i = 0;i < height;++i){
-            for(int j = 1;j < width;++j){
-                if(i == 0){
-                    energy[i][j] = energy(j, i) + Math.min(energy[i][j - 1], energy[i + 1][j - 1]);
-                } else if(j == height - 1){
-                    energy[i][j] = energy(j, i) + Math.min(energy[i][j - 1], energy[i - 1][j - 1]);
-                } else {
-                    energy[i][j] = energy(j, i) + Math.min(energy[i][j - 1], Math.min(energy[i - 1][j - 1], energy[i + 1][j - 1]));
-                }
-            }
-        }
-        int[] seam = new int[width];
-        int min_idx = 0;
-        double min_value = Double.POSITIVE_INFINITY;
-        for(int i = 0;i < height;++i){
-            if(energy[width - 2][i] < min_value){
-                min_idx = i;
-                min_value = energy[width - 2][i];
-            }
-        }
-        seam[width - 2] = min_idx;
-        seam[width - 1] = min_idx;
-        int back_tracking = width - 2;
-        while(back_tracking > 0){
-            int prev_idx = seam[back_tracking];
-            int final_choice = prev_idx;
-            if(prev_idx - 1 > 0 && energy[prev_idx - 1][back_tracking] < energy[prev_idx][back_tracking]){
-                final_choice = prev_idx-1;
-            } if(prev_idx + 1 < height && energy[prev_idx + 1][back_tracking] < energy[prev_idx][back_tracking]){
-                final_choice = prev_idx + 1;
-            }
-            seam[--back_tracking] = final_choice;
-        }
-        return seam;
+        return null;
     }
 
     /**
@@ -146,20 +110,19 @@ public class SeamCarver {
         int min_idx = 0;
         double min_value = Double.POSITIVE_INFINITY;
         for(int i = 0;i < width;++i){
-            if(energy[height - 2][i] < min_value){
+            if(energy[height - 1][i] < min_value){
                 min_idx = i;
-                min_value = energy[height - 2][i];
+                min_value = energy[height - 1][i];
             }
         }
-        seam[height - 2] = min_idx;
         seam[height - 1] = min_idx;
-        int back_tracking = height - 2;
+        int back_tracking = height - 1;
         while(back_tracking > 0){
             int prev_idx = seam[back_tracking];
             int final_choice = prev_idx;
-            if(prev_idx - 1 > 0 && energy[back_tracking][prev_idx - 1] < energy[back_tracking][prev_idx]){
+            if(prev_idx - 1 >= 0 && energy[back_tracking - 1][prev_idx - 1] < energy[back_tracking - 1][final_choice]){
                 final_choice = prev_idx-1;
-            } if(prev_idx + 1 < width && energy[back_tracking][prev_idx + 1] < energy[back_tracking][prev_idx]){
+            } if(prev_idx + 1 < width && energy[back_tracking - 1][prev_idx + 1] < energy[back_tracking - 1][final_choice]){
                 final_choice = prev_idx + 1;
             }
             seam[--back_tracking] = final_choice;
@@ -172,6 +135,31 @@ public class SeamCarver {
      * @param seam the horizontal seam to be removed from the image
      */
     public void removeHorizontalSeam(int[] seam){
+        if(seam == null || seam.length != width || width <= 1){
+            throw new IllegalArgumentException();
+        }
+        for(int i = 0;i < seam.length;i++){
+            if(seam[i] < 0 || seam[i] > width){
+                throw new IllegalArgumentException();
+            }
+        }
+        for(int i = 1;i < seam.length;i++){
+            if(Math.abs(seam[i] - seam[i - 1]) > 1){
+                throw new IllegalArgumentException();
+            }
+        }
+        Picture p = new Picture(width, height - 1);
+        for(int i = 0;i < height;++i){
+            int write_idx = 0;
+            for(int j = 0;j < width;++j){
+                if(seam[i] != i){
+                    p.set(j,write_idx++, picture.get(j, i));
+                }
+            }
+        }
+        picture = p;
+        this.height = picture.height();
+        this.width = picture.width();
     }
 
     /**
