@@ -159,6 +159,8 @@ public class SeamCarver {
             }
         }
         picture = p;
+        this.height = picture.height();
+        this.width = picture.width();
     }
 
     public static void main(String[] args) {
